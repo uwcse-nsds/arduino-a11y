@@ -111,9 +111,11 @@ We implemented three different strategies:
 
 We wanted to try a variety of strategies since we are not sure which would work best; indeed, the "best" strategy is likely context dependent -- based on a user's preferences and the kind of signal being analyzed.  So, having a broad range of tools to choose from seems like a good idea.
 
-[This video](https://www.youtube.com/watch?v=Oam75W0x258)demonstrates the features we implemented.
+[This video](https://www.youtube.com/watch?v=Oam75W0x258) demonstrates the features we implemented.
 
 [Back to Table of Contents](#table-of-contents)
+
+---
 
 #### Capture to Clipboard {#capture-to-clipboard}
 

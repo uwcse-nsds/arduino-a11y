@@ -35,16 +35,12 @@ These have all been implemented to the "proof of concept" stage and could be use
 The Arduino ecosystem is one of the oldest and most popular hobbyist embedded development platforms, due to low cost of entry for both hardware and software, and because a wide range of systems and peripherals support it.   A typical Arduino project consists of an Arduino processing board with simply-connected digital and analog peripherals, such as switches, potentiometers, and simple digital bus interface devices such as an accelerometer.  The Arduino repeatedly samples sensor values and performs processing based on those values; for example, actuating a servo, making a sound, or generating an HTTP request sent to the Internet. 
 
 
-![Arduino Leonardo board wired with an on off switch.](images/arduino.png "Arduino Leonardo wired with a simple on/off switch")
+![Arduino Leonardo board wired with an on off switch.](images/arduino.png)
 
 Arduino Leonardo wired with a simple on/off switch.
 
 ---
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![Block diagram of an Arduino embedded system showing serial communication with a host laptop](images/embedded-block-diagram.png)
 
 Block diagram of an Arduino embedded system showing serial communication with a host laptop
 
@@ -52,15 +48,7 @@ Arduino development can be challenging for people with disabilities.  First, har
 
 Second, the Arduino IDE is a Java Swing application, and has a minimal screen reader interface.  While Java Swing does talk to Java's accessibility framework, there are two problems: Windows requires an optional third-party module, the Java Access Bridge, to interface Java accessibility with native Windows OS accessibility.  This needs to be installed specially and enabled by hand.   The Arduino IDE developers added improvements for accessibility support in 2019 (release 1.8.10), focusing on fixing components which did not interact well with screen readers.
 
- 
-
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
+![Block diagram of the Windows Java Access Bridge in a Windows system.](images/jab-architecture.png)
 
 Block diagram of the Windows Java Access Bridge in a Windows system.
 
@@ -73,20 +61,13 @@ Finally, the Arduino IDE's support for digital and analog signal analysis is not
 <p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image3.png "image_tooltip")
-
+![Arduino IDE's Signal Plotter Tool](images/serial-plotter.png)
 
 Arduino IDE's Signal Plotter Tool
 
  A second tool permits viewing serial data a text in a window, but this text is difficult to render in a screen reader because of the IDE's minimal screen reader support.
 
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
-
+![Arduino IDE's Signal Monitor Tool](images/serial_monitor.png)
 
 Arduino IDE's Signal Monitor Tool
 
@@ -109,19 +90,11 @@ While most of the existing solutions we reviewed used sound generation on board 
 
 Signal data can be complex.  Most Arduino use we've seen falls into one of the following use cases:
 
-
-
 *   Digital data (ones and zeros).
 *   Simple analog data varying slowly over time; for example changes in a potentiometer position.
 *   Complex analog data such as the output from a microphone or an accelerometer.  
 
-
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
-
+![Digital data waveforms showing pulses of high and low level values](images/example-square-wave.png)
 
 Digital data waveforms
 
@@ -131,15 +104,13 @@ Our work focused on the first use case, debugging streams of digital data.  Whil
 
 We implemented three different strategies:
 
-
-
 *   Capture and transfer signal data to the system clipboard, for rendering by the user's tool of choice.
 *   Detect signal features in real time and read them through the system's screen reader.
 *   Play a continuous tone, varying its pitch as the signal level changes.
 
 We wanted to try a variety of strategies since we are not sure which would work best; indeed, the "best" strategy is likely context dependent -- based on a user's preferences and the kind of signal being analyzed.  So, having a broad range of tools to choose from seems like a good idea.
 
-[This video ](https://www.youtube.com/watch?v=Oam75W0x258)demonstrates the features we implemented.
+[This video](https://www.youtube.com/watch?v=Oam75W0x258)demonstrates the features we implemented.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -155,9 +126,7 @@ This technique provides a controlled way to capture and transfer received signal
 6. Paste the clipboard contents to the preferred editor.
 7. Navigate through the pasted data and let the editor's speech interface render the data.
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image6.png "image_tooltip")
+![Transferring captured signal data using the system clipboard from the Arduino IDE to Notepad++](images/capture-paste.png)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -172,10 +141,7 @@ In this method rising and falling level transitions, such as seen when opening o
 
 This method presumes that the user has successfully configured their Arduino IDE and the Java Access Bridge to send accessibility events to the installed screen reader.
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![Example of plotted signal with high and low transition features detected.](images/feature-extraction.png)
 
 Example of plotted signal with high and low transition features detected.
 
@@ -192,14 +158,9 @@ In this method, a continuous tone is played while receiving the signal.  As the 
 4. The pitch will change to a high frequency when the signal level is high, and return to low when the signal is low.
 5. Check the Sonify check box again to silence the tone.
 
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
-
+![Example of plotted signal showing where high and low tones are played](images/sonification.png)
 
     Example of plotted signal showing where high and low tones are played.
-
 
 The continuous tone generator implemented for this project has a defect in that the sound played back has occasional pops.  We believe this is due to simple direct signal synthesis technique used for tone generation.  Given time, it should be possible to either fix this defect or find an alternative tone generation technique which does not exhibit this problem.
 

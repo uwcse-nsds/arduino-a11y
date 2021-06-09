@@ -9,8 +9,8 @@ Brett Wortzman
 [Future of Access Technology: CSEP 590A, Spring 2021](https://courses.cs.washington.edu/courses/csep590a/21sp/)
 
 ### Table of Contents {#table-of-contents}
-=================
 
+* [Overview Video](#video)
 * [Introduction](#introduction)
 * [Background](#background)
 * [Related Work](#related-work)
@@ -21,6 +21,9 @@ Brett Wortzman
 * [Validation](#validation)
 * [Learnings and Future Work](#learnings-and-future-work)
 * [References](#references)
+
+### Overview Video {#video}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Oam75W0x258" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Introduction {#introduction}
 

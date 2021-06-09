@@ -35,21 +35,11 @@ These have all been implemented to the "proof of concept" stage and could be use
 The Arduino ecosystem is one of the oldest and most popular hobbyist embedded development platforms, due to low cost of entry for both hardware and software, and because a wide range of systems and peripherals support it.   A typical Arduino project consists of an Arduino processing board with simply-connected digital and analog peripherals, such as switches, potentiometers, and simple digital bus interface devices such as an accelerometer.  The Arduino repeatedly samples sensor values and performs processing based on those values; for example, actuating a servo, making a sound, or generating an HTTP request sent to the Internet. 
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
+![Arduino Leonardo board wired with an on off switch.](images/arduino.png "Arduino Leonardo wired with a simple on/off switch")
 
 Arduino Leonardo wired with a simple on/off switch.
 
-
-
 ---
-
-
-
 
 <p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 

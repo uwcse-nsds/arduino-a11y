@@ -34,17 +34,15 @@ These have all been implemented to the "proof of concept" stage and could be use
 
 The Arduino ecosystem is one of the oldest and most popular hobbyist embedded development platforms, due to low cost of entry for both hardware and software, and because a wide range of systems and peripherals support it.   A typical Arduino project consists of an Arduino processing board with simply-connected digital and analog peripherals, such as switches, potentiometers, and simple digital bus interface devices such as an accelerometer.  The Arduino repeatedly samples sensor values and performs processing based on those values; for example, actuating a servo, making a sound, or generating an HTTP request sent to the Internet. 
 
-<div align="center">
 ![Arduino Leonardo board wired with an on off switch.](images/arduino.png)
 
  **Arduino Leonardo wired with a simple on/off switch**
-</div>
+ 
 ---
-<div align="center">
+
 ![Block diagram of an Arduino embedded system showing serial communication with a host laptop](images/embedded-block-diagram.png)
 
 **Block diagram of an Arduino embedded system showing serial communication with a host laptop**
-</div>
 
 Arduino development can be challenging for people with disabilities.  First, hardware development and prototyping often presumes dexterity, mobility, and visual acuity due to the need for precise manipulation of small components when building circuits.  
 

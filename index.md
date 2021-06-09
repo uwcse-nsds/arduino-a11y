@@ -1,6 +1,6 @@
 
 
-## Arduino IDE Signal Monitoring Accessibility Improvements
+# Arduino IDE Signal Monitoring Accessibility Improvements
 
 Neil Smith
 
@@ -8,7 +8,7 @@ Brett Wortzman
 
 [Future of Access Technology: CSEP 590A, Spring 2021](https://courses.cs.washington.edu/courses/csep590a/21sp/)
 
-Table of Contents {#table-of-contents}
+### Table of Contents {#table-of-contents}
 =================
 
 * [Introduction](#introduction)

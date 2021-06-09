@@ -11,7 +11,7 @@ Future of Access Technology
 CSEP 590A, Spring 2021
 
 
-Table of Contents
+Table of Contents {#table-of-contents}
 =================
 
 * [Introduction](#introduction)
@@ -32,6 +32,7 @@ Arduino is a popular microcontroller development platform.  This project explore
 
 These have all been implemented to the "proof of concept" stage and could be used as a basis for subsequent user research, improvements, and refinement for release as IDE enhancements.  The ideas presented in this project could also be applied to other development environments, for example Visual Studio Code's Arduino plugin, or standalone open source serial data tools.
 
+[Back to Table of Contents](#table-of-contents)
 
 ### Background {#background}
 
@@ -103,6 +104,8 @@ Arduino IDE's Signal Plotter Tool
 
 Arduino IDE's Signal Monitor Tool
 
+[Back to Table of Contents](#table-of-contents)
+
 
 ### Related Work {#related-work}
 
@@ -111,6 +114,8 @@ The Blind Electronics blog ([http://blindelectronics.com](http://blindelectronic
 The Blind Arduino Blog ([http://blarbl.blogspot.com](http://blarbl.blogspot.com)) has an article discussing techniques for making signal information available to blind users through sound.  The article starts by discussing visual signal displays most commonly used in Arduino projects, and how these displays are not usable by blind users or developers.  The author suggests non-visual outputs, such as sound or haptic feedback.  While linking to a related article on haptic feedback, the rest of the article discusses how to use tone generation on the Arduino board itself to make digital and analog signals available to a BLV developer.   The article is fairly thorough, including detailed code examples.
 
 Finally, we found research (Qutieshat et al., 2019) describing the design and implementation of an Arduino-based pH sensor for the visually impaired.  This project was for a chemistry instruction lab for a health sciences degree program in Jordan.   The lab used pH paper, which assumes accurate assessment of color by the viewer, for measuring pH values.  This meant that colorblind students had problems measuring pH.  The researchers interfaced an off-the-shelf colorimetric sensor breakout board from [Adafruit](https://learn.adafruit.com/adafruit-color-sensors) with an Arduino.  They were able to translate pH paper colors to an audible signal -- number of beeps per pH number.  Color-blind users evaluating their system felt that the system "...provided them with a unique experience that is not possible in the traditional teaching approach, thereby boosting their self-esteem and making them feel equal to their peers".
+
+[Back to Table of Contents](#table-of-contents)
 
 
 ### Solutions {#solutions}
@@ -151,6 +156,7 @@ We wanted to try a variety of strategies since we are not sure which would work 
 
 [This video ](https://www.youtube.com/watch?v=Oam75W0x258)demonstrates the features we implemented.
 
+[Back to Table of Contents](#table-of-contents)
 
 #### Capture to Clipboard {#capture-to-clipboard}
 
@@ -173,6 +179,7 @@ This technique provides a controlled way to capture and transfer received signal
 
 ![alt_text](images/image6.png "image_tooltip")
 
+[Back to Table of Contents](#table-of-contents)
 
 
 #### Extracting Features and Rendering via Text-to-Speech {#extracting-features-and-rendering-via-text-to-speech}
@@ -195,6 +202,8 @@ This method presumes that the user has successfully configured their Arduino IDE
 ![drawing](https://docs.google.com/drawings/d/12345/export/png)
 
 Example of plotted signal with high and low transition features detected.
+
+[Back to Table of Contents](#table-of-contents)
 
 
 #### Continuous Tone with Variable Pitch {#continuous-tone-with-variable-pitch}
@@ -222,6 +231,7 @@ In this method, a continuous tone is played while receiving the signal.  As the 
 
 The continuous tone generator implemented for this project has a defect in that the sound played back has occasional pops.  We believe this is due to simple direct signal synthesis technique used for tone generation.  Given time, it should be possible to either fix this defect or find an alternative tone generation technique which does not exhibit this problem.
 
+[Back to Table of Contents](#table-of-contents)
 
 ### Validation {#validation}
 
@@ -237,6 +247,7 @@ and used these as tests while designing and developing our solutions.
 
 We did not have time or resources to put our work in front of blind or low vision users who might be able to give usability feedback on the tool.  Embedded system debugging is a highly individualistic and manual task.  The real-world usability and value of our work still needs to be validated through a carefully run user study.  
 
+[Back to Table of Contents](#table-of-contents)
 
 ### Learnings and Future Work {#learnings-and-future-work}
 
@@ -253,6 +264,8 @@ Aside from conducting user validation and responding to any significant issues f
 *   Extend these features to other signal rendering environments such as Visual Studio Code or standalone open source signal plotting tools.
 *   Conduct user research on current day BLV user embedded system debugging practices to learn more about preferred operating environments (i.e. Windows vs Linux vs Mac) and preferred screen readers.
 *   Connect with other Arduino IDE developers working on accessibility features to learn how we can work with them to improve things.
+
+[Back to Table of Contents](#table-of-contents)
 
 
 ### References {#references}

@@ -14,16 +14,16 @@ CSEP 590A, Spring 2021
 Table of Contents
 =================
 
-* Introduction (#introduction)
-* Background (#background)
-* Related Work (#related-work)
-* Solutions (#solutions)
-  * Capture to Clipboard (#capture-to-clipboard)
-  * Extracting Features and Rendering via Text-to-Speech (#extracting-features-and-rendering-via-text-to-speech)
-  * Continuous Tone with Variable Pitch (#continuous-tone-with-variable-pitch)
-* Validation (#validation)
-* Learnings and Future Work (#learnings-and-future-work)
-* References (#references)
+* [Introduction](#introduction)
+* [Background](#background)
+* [Related Work](#related-work)
+* [Solutions](#solutions)
+  * [Capture to Clipboard](#capture-to-clipboard)
+  * [Extracting Features and Rendering via Text-to-Speech](#extracting-features-and-rendering-via-text-to-speech)
+  * [Continuous Tone with Variable Pitch](#continuous-tone-with-variable-pitch)
+* [Validation](#validation)
+* [Learnings and Future Work](#learnings-and-future-work)
+* [References](#references)
 
 
 ### Introduction {#introduction}

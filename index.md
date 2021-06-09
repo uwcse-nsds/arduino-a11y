@@ -6,10 +6,7 @@ Neil Smith
 
 Brett Wortzman
 
-Future of Access Technology
-
-CSEP 590A, Spring 2021
-
+[Future of Access Technology: CSEP 590A, Spring 2021](https://courses.cs.washington.edu/courses/csep590a/21sp/)
 
 Table of Contents {#table-of-contents}
 =================
@@ -24,7 +21,6 @@ Table of Contents {#table-of-contents}
 * [Validation](#validation)
 * [Learnings and Future Work](#learnings-and-future-work)
 * [References](#references)
-
 
 ### Introduction {#introduction}
 
@@ -106,7 +102,6 @@ Arduino IDE's Signal Monitor Tool
 
 [Back to Table of Contents](#table-of-contents)
 
-
 ### Related Work {#related-work}
 
 The Blind Electronics blog ([http://blindelectronics.com](http://blindelectronics.com)) includes an article on how to set up the Arduino IDE with the Windows JAWS and NVDA screen readers.  Since the Arduino IDE is a Java Swing-based application, Windows requires that the Java Access Bridge also be installed and activated so that the Java runtime can communicate with the Windows accessibility libraries.  This has to be set up by hand as it's not part of the default Arduino installation.  
@@ -162,8 +157,6 @@ We wanted to try a variety of strategies since we are not sure which would work 
 
 This technique provides a controlled way to capture and transfer received signal data to a user's preferred editing environment.  The workflow is:
 
-
-
 1. Open the Arduino IDE serial monitor.
 2. Press Ctrl-Space to start capturing serial data.
 3. Perform the desired physical input on the embedded system.
@@ -172,10 +165,7 @@ This technique provides a controlled way to capture and transfer received signal
 6. Paste the clipboard contents to the preferred editor.
 7. Navigate through the pasted data and let the editor's speech interface render the data.
 
-
-
 <p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image6.png "image_tooltip")
 
@@ -186,15 +176,11 @@ This technique provides a controlled way to capture and transfer received signal
 
 In this method rising and falling level transitions, such as seen when opening or closing a digital switch, are detected.  If the NVDA screen reader application is running at the same time as the IDE, the transition is read by the screen reader, as "high" or "low".  The workflow is:
 
-
-
 1. Open the Arduino IDE serial plotter.
 2. Perform the desired physical input on the embedded system.
 3. Signal transitions from low to high are spoken as "high", and signal transitions from high to low are spoken as "low".
 
 This method presumes that the user has successfully configured their Arduino IDE and the Java Access Bridge to send accessibility events to the installed screen reader.
-
-
 
 <p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
@@ -210,15 +196,11 @@ Example of plotted signal with high and low transition features detected.
 
 In this method, a continuous tone is played while receiving the signal.  As the signal value rises and falls, the tone pitch also rises and falls.  The workflow is:
 
-
-
 1. Open the Arduino IDE serial plotter.
 2. Check the 'Sonify' check box.  Note that a tone is played.
 3. Perform the desired input operation on the embedded system.
 4. The pitch will change to a high frequency when the signal level is high, and return to low when the signal is low.
 5. Check the Sonify check box again to silence the tone.
-
-    
 
 <p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
@@ -236,8 +218,6 @@ The continuous tone generator implemented for this project has a defect in that 
 ### Validation {#validation}
 
 Validation consisted of self-testing our work.  We wrote several Arduino sketches which generated different kinds of digital signal streams:
-
-
 
 *   Multiple simultaneous channels of data.
 *   Square wave of fixed frequency.
@@ -257,8 +237,6 @@ As previously mentioned, the most important next step is to get real-world feedb
 
 Aside from conducting user validation and responding to any significant issues found, other work which could be done in this area includes:
 
-
-
 *   Improve audio quality of the continuous sonification tone.
 *   Explore more complex signal feature extraction; for example, sequences of pulses matching a particular pattern.
 *   Extend these features to other signal rendering environments such as Visual Studio Code or standalone open source signal plotting tools.
@@ -266,7 +244,6 @@ Aside from conducting user validation and responding to any significant issues f
 *   Connect with other Arduino IDE developers working on accessibility features to learn how we can work with them to improve things.
 
 [Back to Table of Contents](#table-of-contents)
-
 
 ### References {#references}
 

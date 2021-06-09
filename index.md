@@ -48,28 +48,23 @@ Arduino development can be challenging for people with disabilities.  First, har
 
 Second, the Arduino IDE is a Java Swing application, and has a minimal screen reader interface.  While Java Swing does talk to Java's accessibility framework, there are two problems: Windows requires an optional third-party module, the Java Access Bridge, to interface Java accessibility with native Windows OS accessibility.  This needs to be installed specially and enabled by hand.   The Arduino IDE developers added improvements for accessibility support in 2019 (release 1.8.10), focusing on fixing components which did not interact well with screen readers.
 
-<div align="center">
 ![Block diagram of the Windows Java Access Bridge in a Windows system.](images/jab-architecture.png)
 
 **Block diagram of the Windows Java Access Bridge in a Windows system**
 
 (from [https://docs.oracle.com/javase/9/access/java-access-bridge-architecture.htm](https://docs.oracle.com/javase/9/access/java-access-bridge-architecture.htm))
-</div>
+
 Finally, the Arduino IDE's support for digital and analog signal analysis is not very accessible.   The main tool for analyzing signals is a visual graph of signal values over time.  This is very useful for sighted developers, but totally unusable by a blind developer. 
 
-<div align="center">
 ![Arduino IDE's Signal Plotter Tool](images/serial-plotter.png)
 
 **Arduino IDE's Signal Plotter Tool**
-</div>
 
  A second tool permits viewing serial data a text in a window, but this text is difficult to render in a screen reader because of the IDE's minimal screen reader support.
  
-<div align="center">
 ![Arduino IDE's Signal Monitor Tool](images/serial_monitor.png)
 
 **Arduino IDE's Signal Monitor Tool**
-</div>
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -94,13 +89,12 @@ Signal data can be complex.  Most Arduino use we've seen falls into one of the f
 *   Simple analog data varying slowly over time; for example changes in a potentiometer position.
 *   Complex analog data such as the output from a microphone or an accelerometer.  
 
-<div align="center">
 ![Digital data waveforms showing pulses of high and low level values](images/example-square-wave.png)
 
 **Digital data waveforms**
 
 (from https://commons.wikimedia.org/wiki/File:Digital_Ion_Trap_waveforms.jpg)
-</div>
+
 
 Our work focused on the first use case, debugging streams of digital data.  While we acknowledge the second and especially the third use cases are significant, we felt we had no great solution for this case in the time available.  However, we believe that we have several viable solutions for digital data debugging.
 
@@ -128,9 +122,7 @@ This technique provides a controlled way to capture and transfer received signal
 6. Paste the clipboard contents to the preferred editor.
 7. Navigate through the pasted data and let the editor's speech interface render the data.
 
-<div align="center">
 ![Transferring captured signal data using the system clipboard from the Arduino IDE to Notepad++](images/capture-paste.png)
-</div>
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -145,11 +137,9 @@ In this method rising and falling level transitions, such as seen when opening o
 
 This method presumes that the user has successfully configured their Arduino IDE and the Java Access Bridge to send accessibility events to the installed screen reader.
 
-<div align="center">
 ![Example of plotted signal with high and low transition features detected.](images/feature-extraction.png)
 
 **Example of plotted signal with high and low transition features detected.**
-</div>
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -164,11 +154,9 @@ In this method, a continuous tone is played while receiving the signal.  As the 
 4. The pitch will change to a high frequency when the signal level is high, and return to low when the signal is low.
 5. Check the Sonify check box again to silence the tone.
 
-<div align="center">
 ![Example of plotted signal showing where high and low tones are played](images/sonification.png)
 
 **Example of plotted signal showing where high and low tones are played**
-</div>
 
 The continuous tone generator implemented for this project has a defect in that the sound played back has occasional pops.  We believe this is due to simple direct signal synthesis technique used for tone generation.  Given time, it should be possible to either fix this defect or find an alternative tone generation technique which does not exhibit this problem.
 

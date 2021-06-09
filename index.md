@@ -30,6 +30,8 @@ These have all been implemented to the "proof of concept" stage and could be use
 
 [Back to Table of Contents](#table-of-contents)
 
+---
+
 ### Background {#background}
 
 The Arduino ecosystem is one of the oldest and most popular hobbyist embedded development platforms, due to low cost of entry for both hardware and software, and because a wide range of systems and peripherals support it.   A typical Arduino project consists of an Arduino processing board with simply-connected digital and analog peripherals, such as switches, potentiometers, and simple digital bus interface devices such as an accelerometer.  The Arduino repeatedly samples sensor values and performs processing based on those values; for example, actuating a servo, making a sound, or generating an HTTP request sent to the Internet. 
@@ -68,6 +70,8 @@ Finally, the Arduino IDE's support for digital and analog signal analysis is not
 
 [Back to Table of Contents](#table-of-contents)
 
+---
+
 ### Related Work {#related-work}
 
 The Blind Electronics blog ([http://blindelectronics.com](http://blindelectronics.com)) includes an article on how to set up the Arduino IDE with the Windows JAWS and NVDA screen readers.  Since the Arduino IDE is a Java Swing-based application, Windows requires that the Java Access Bridge also be installed and activated so that the Java runtime can communicate with the Windows accessibility libraries.  This has to be set up by hand as it's not part of the default Arduino installation.  
@@ -78,6 +82,7 @@ Finally, we found research (Qutieshat et al., 2019) describing the design and im
 
 [Back to Table of Contents](#table-of-contents)
 
+---
 
 ### Solutions {#solutions}
 
@@ -126,6 +131,7 @@ This technique provides a controlled way to capture and transfer received signal
 
 [Back to Table of Contents](#table-of-contents)
 
+---
 
 #### Extracting Features and Rendering via Text-to-Speech {#extracting-features-and-rendering-via-text-to-speech}
 
@@ -143,6 +149,7 @@ This method presumes that the user has successfully configured their Arduino IDE
 
 [Back to Table of Contents](#table-of-contents)
 
+---
 
 #### Continuous Tone with Variable Pitch {#continuous-tone-with-variable-pitch}
 
@@ -162,6 +169,8 @@ The continuous tone generator implemented for this project has a defect in that 
 
 [Back to Table of Contents](#table-of-contents)
 
+---
+
 ### Validation {#validation}
 
 Validation consisted of self-testing our work.  We wrote several Arduino sketches which generated different kinds of digital signal streams:
@@ -175,6 +184,8 @@ and used these as tests while designing and developing our solutions.
 We did not have time or resources to put our work in front of blind or low vision users who might be able to give usability feedback on the tool.  Embedded system debugging is a highly individualistic and manual task.  The real-world usability and value of our work still needs to be validated through a carefully run user study.  
 
 [Back to Table of Contents](#table-of-contents)
+
+---
 
 ### Learnings and Future Work {#learnings-and-future-work}
 
@@ -191,6 +202,8 @@ Aside from conducting user validation and responding to any significant issues f
 *   Connect with other Arduino IDE developers working on accessibility features to learn how we can work with them to improve things.
 
 [Back to Table of Contents](#table-of-contents)
+
+---
 
 ### References {#references}
 

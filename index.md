@@ -31,7 +31,7 @@ Brett Wortzman
 
 ### Introduction {#introduction}
 
-Arduino is a popular microcontroller development platform.  This project explores techniques for improving the accessibility of digital signal analysis tasks in the Arduino Integrated Development Environment (IDE).  [We present three interaction modalities: easy capture of signal data to the clipboard; feature extraction from a stream of signal data, with features spoken by the system's screen reader; and continuous sonification of a signal data stream](https://www.youtube.com/watch?v=Oam75W0x258).  
+Arduino is a popular microcontroller development platform.  This project explores techniques for improving the accessibility of digital signal analysis tasks in the Arduino Integrated Development Environment (IDE).  We present three interaction modalities: easy capture of signal data to the clipboard; feature extraction from a stream of signal data, with features spoken by the system's screen reader; and continuous sonification of a signal data stream.  
 
 These have all been implemented to the "proof of concept" stage and could be used as a basis for subsequent user research, improvements, and refinement for release as IDE enhancements.  The ideas presented in this project could also be applied to other development environments, for example Visual Studio Code's Arduino plugin, or standalone open source serial data tools.
 
